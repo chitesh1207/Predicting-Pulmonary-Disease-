@@ -17,8 +17,52 @@ This repository supports the coursework for the 7072CEM Machine Learning module 
 - `main.ipynb`: Full pipeline in one notebook.
 - `requirements.txt`: Python dependencies.
 
-## Setup Instructions
-1. **Clone**:
-   ```bash
-   git clone https://github.com/yourusername/pulmonary-disease-ml.git
-   cd pulmonary-disease-ml
+
+
+---
+
+### README 2: About Code Only
+
+```markdown
+# Code for Predicting Pulmonary Disease Using Machine Learning
+
+This repository contains the Python code for the 7072CEM coursework by Chitesh Kumar Bedapudi, implementing machine learning models to classify pulmonary disease.
+
+## Code Files
+- `Predicting_Pulmonary_Disease_using_ML.ipynb`: 
+  - Handles missing data (mean/mode imputation).
+  - Encodes categorical features (Label/One-Hot).
+  - Scales features (`StandardScaler`).
+  - Balances classes (`SMOTE`).
+  - Reduces dimensions (`PCA`) and selects features (`RFE`).
+- `models`: 
+  - Trains Random Forest (`RandomForestClassifier`).
+  - Trains SVM (`SVC` with kernel trick).
+  - Trains XGBoost (`XGBClassifier` with hyperparameter tuning).
+- `evaluation`: 
+  - Computes accuracy, precision, recall, F1-score (`sklearn.metrics`).
+  - Generates ROC-AUC scores and confusion matrices.
+- `visualizations`: 
+  - Plots EDA (histograms, heatmaps via `seaborn`).
+  - Visualizes results (ROC curves, probability distributions).
+- `main`: 
+  - Combines all steps: preprocessing, training, evaluation, and visualization.
+
+## Dependencies
+Listed in `requirements`:
+- `scikit-learn`
+- `xgboost`
+- `imblearn`
+- `pandas`
+- `numpy`
+- `matplotlib`
+- `seaborn`
+
+## Running the Code
+1. requirements
+2. Execute: 
+   - `jupyter notebook Predicting_Pulmonary_Disease_using_ML.ipynb` (full pipeline)
+
+## Notes
+- Assumes dataset (`Lung_Cancer_Dataset.csv`) in `data/`. If absent, adjust paths.
+- Outputs match paper results (e.g., XGBoost accuracy: 92%).
